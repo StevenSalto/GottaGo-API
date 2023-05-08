@@ -1,5 +1,5 @@
 const app = require('./app');
 
 app.listen(process.env.PORT,() => {
-  console.log(`Server Running...`);
+  console.log(`Server Running...`,process.env.PORT);
 });
