@@ -16,7 +16,6 @@ router.post('/create', async (req, res) => {
 router.get('/get/:bathroom_id', async (req, res) => {
   try {
     const { bathroom_id } = req.params;
-    console.log(bathroom_id)
     const bathroomPosts = await Message.getChatHistory(bathroom_id);
     return res.status(200).json(bathroomPosts);
   } catch (error) {
