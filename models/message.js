@@ -1,11 +1,11 @@
 const db = require('../db');
 
 class Message {
-  static async create(sender_id, bathroom_id, content) {
+  static async create(user_id, bathroom_id, content) {
     const result = await db.query(
       `INSERT INTO posts (user_id, bathroom_id, content)
        VALUES ($1, $2, $3) RETURNING *`,
-      [sender_id, bathroom_id, content]
+      [user_id, bathroom_id, content]
     );
 
     return result.rows;
