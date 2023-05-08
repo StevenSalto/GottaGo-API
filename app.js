@@ -15,8 +15,8 @@ app.use('/bathroom', bathroomRouter)
 app.use('/user', userRouter)
 app.use('/message', messageRouter)
 
-app.get('/', async (req, res) => {
-  res.send('ur not supposed to be here...')
+app.get('/', async (res) => {
+  res.send('...Request Successful...')
 })
 
 module.exports = app;
