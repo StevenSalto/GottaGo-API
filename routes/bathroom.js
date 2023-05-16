@@ -8,8 +8,8 @@ router.post('/create', async(req, res) => {
     return res.status(201).json(newBathroom);
 })
 
-router.get('/read', async (req, res) => {
-    const bathroomInfo = await Bathroom.readBathroom(req.body);
+router.get('/read/:bathroom_id', async (req, res) => {
+    const bathroomInfo = await Bathroom.readBathroom(req.params.bathroom_id);
     return res.status(200).json(bathroomInfo);
 })
 
