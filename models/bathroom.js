@@ -77,7 +77,7 @@ class Bathroom {
             SELECT * FROM BATHROOMS
             WHERE (lat BETWEEN $1 AND $2)
             AND (lng BETWEEN $3 AND $4)`,
-            [lat-0.1, lat+0.1, lng-0.1, lng+0.1])
+            [lat-0.01, lat+0.01, lng-0.01, lng+0.01])
 
             return result.rows
          } catch(e) {
